@@ -1,7 +1,8 @@
 # Личный проект «Девайс»
 
 * Студент: [Полина Цветкова](https://up.htmlacademy.ru/htmlcss/35/user/2075923).
-* Наставник: `Неизвестно`.
+* Наставник: [Павел Нюкало](https://htmlacademy.ru/profile/nyukalopavel).
+
 
 ---
 
