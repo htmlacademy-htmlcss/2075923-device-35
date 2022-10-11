@@ -1,54 +1,68 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
     <header class="page-header">
-      <!--я предполагаю, что по нажатию на логотип на других страницах, пользователя будет возвращать на главную,поэтому я обернула изображение в ссылку-->
       <a class="page-header-logo" href="#">
-        <img class="logo" src="#" alt="логотип магазина Device">
+        <img class="logo" src="#" alt="логотип магазина Device"/>
       </a>
       <nav class="navigation">
         <form class="navigation-form" action="https://echo.htmlacademy.ru/" method="post">
-          <!--Правильно ли я поняла, что все декоротивные иконки идут как <span class="visually-hidden"> и потом вставляются через CSS?-->
-          <span class="visually-hidden">Поиск</span>
-          <label for="search">Поиск</label>
-          <input class="navigation-search" id="search" type="search" placeholder="Поиск по сайту">
-          <button class="navigation-find>" type="submit">Найти</button>
+          <label class="navigation-label">
+            <span class="visually-hidden">Поиск</span>
+            <input class="navigation-search" type="search" placeholder="Поиск по сайту"/>
+          </label>
+          <button class="navigation-find" type="submit">Найти</button>
         </form>
         <ul class="navigation-list">
-           <!--есть вопрос по этим пунктам.Они себя тут все могут вести либо как всплывающие окна, но так же потом могут являться переходом на другую страницу.Например, "Войти" - может оставить на странице, если я уже авторизированный пользователь, однако, если я впервые на сайте, меня может перевести на страницу регистрации.-->
           <li class="navigation-item">
-            <span class="visually-hidden">Войти</span>
-            <button class="navigation-button">Войти</button>
+            <a class="navigation-link" href="#">Войти</a>
           </li>
           <li class="navigation-item">
-            <span class="visually-hidden">Сравнить</span>
-            <button class="navigation-button">Сравнить</button>
+            <a class="navigation-link" href="#">Сравнить</a>
           </li>
           <li class="navigation-item">
-            <span class="visually-hidden">Корзина</span>
-            <button class="navigation-button">Корзина</button>
+            <a class="navigation-link" href="#">Корзина</a>
           </li>
         </ul>
-        <ul class="navigation-item-menu">
-          <!--вот тут сложно понять, каталог товаров и плюс рядом, они часть одного пункта в списке элиментов или два разных?Так же непонятно как ведет себя элимент "каталог товаров" пнринажатии на него тоже открывается каталог, или только при нажатии на плюсик?Пока сделала "каталог товаров" не ссылкой-->
-          <li class="navigation-list-menu">Каталог товаров</li>
-          <li class="navigation-list-menu">
+        <ul class="navigation-list-menu">
+          <li class="navigation-item-menu">
             <a class="navigation-menu-link" href="catalog.html">
+              Каталог товаров
               <span class="visually-hidden">Открыть Каталог</span>
             </a>
           </li>
-          <li class="navigation-list-menu">
+          <li class="navigation-item-menu">
             <a class="navigation-menu-link" href="#">Доставка</a>
           </li>
-          <li class="navigation-list-menu">
+          <li class="navigation-item-menu">
             <a class="navigation-menu-link" href="#">Гарантия</a>
           </li>
-          <li class="navigation-list-menu">
+          <li class="navigation-item-menu">
             <a class="navigation-menu-link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <ul class="navigation-list-more">
+          <li class="navigation-item-more">
+            <a class="navigation-more-link" href="#">Виртуальная реальность</a>
+          </li>
+          <li class="navigation-item-more">
+            <a class="navigation-more-link" href="#">Моноподы для cелфи</a>
+          </li>
+          <li class="navigation-item-more">
+            <a class="navigation-more-link" href="#">Экшн-камеры</a>
+          </li>
+          <li class="navigation-item-more">
+            <a class="navigation-more-link" href="#">Фитнес-браслеты</a>
+          </li>
+          <li class="navigation-item-more">
+            <a class="navigation-more-link" href="#">Умные часы</a>
+          </li>
+          <li class="navigation-item-more">
+            <a class="navigation-more-link" href="#">Квадрокоптеры</a>
           </li>
         </ul>
       </nav>
@@ -56,9 +70,7 @@
     <main>
       <h1 class="visually-hidden">Интернет-магазин техники Device</h1>
       <section class="product-gallery">
-        <!--Эту секцию я расцениваю как цельую, потому что предполагаю что при переклчении фото, меняется и описание рядом-->
         <h2 class="visually-hidden">Фотогалерея товаров</h2>
-        <img class="slider-image" src="#" alt="квадрокоптер">
         <button class="slider-image-prev" type="button">
           <span class="viseally-hidden">Предыдущее фото</span>
         </button>
@@ -82,7 +94,7 @@
             </button>
           </li>
         </ol>
-        <!--"01" и "Порхает как бабочка,жалит как пчела!" я определила как параграф, потому что они по своему "весу" не напоминают заголовки-->
+        <img class="slider-image" src="#" alt="квадрокоптер" />
         <p class="product-number">01</p>
         <p class="product-title">Порхает как бабочка, жалит как пчела!</p>
         <p class="product-description">
@@ -100,21 +112,56 @@
             <p class="product-property-desription">Радиус поражения</p>
           </li>
         </ul>
+        <img class="slider-image" src="#" alt="фитнес-браслет" />
+        <p class="product-number">02</p>
+        <p class="product-title">Худеем правильно!</p>
+        <p class="product-description">
+          Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
+          занятия и соблюдать диету.
+        </p>
+        <a class="product-link" href="#">Подробнее</a>
+        <ul class="product-advanteges-list">
+          <li class="product-advanteges-item">
+            <b class="product-property">48 часов</b>
+            <p class="product-property-desription">Без подзарядки</p>
+          </li>
+        </ul>
+        <img class="slider-image" src="#" alt="селфи-палка" />
+        <p class="product-number">03</p>
+        <p class="product-title">Делай селфи,как Бен Стиллер!</p>
+        <p class="product-description">
+          Самая длинная палка для селфи доступна в нашем магазине. Восемь
+          (Восемь, Карл!) метров длиной и весом всего 5 кг.
+        </p>
+        <a class="product-link" href="#">Подробнее</a>
+        <ul class="product-advanteges-list">
+          <li class="product-advanteges-item">
+            <b class="product-property">8,5 м</b>
+            <p class="product-property-desription">Длина палки</p>
+          </li>
+          <li class="product-advanteges-item">
+            <b class="product-property">5 кг</b>
+            <p class="product-property-desription">Вес палки</p>
+          </li>
+          <li class="product-advanteges-item">
+            <b class="product-property">Карбон</b>
+            <p class="product-property-desription">Материал</p>
+          </li>
+        </ul>
       </section>
       <section class="products-menu">
         <h2 class="visually-hidden">Меню товаров</h2>
         <ul class="products-menu-list">
           <li class="products-menu-item">
-            <span class="visually-hidden">Очки виртуальной реальности</span>
             <a class="products-menu-link" href="#">
               <h3 class="products-menu-title">Виртуальная реальность</h3>
-              </a>
+            </a>
           </li>
           <li class="products-menu-item">
             <span class="visually-hidden">Монопод</span>
             <a class="products-menu-link" href="monopod.html">
               <h3 class="products-menu-title">Моноподы для селфи</h3>
-              </a>
+            </a>
           </li>
           <li class="products-menu-item">
             <span class="visually-hidden">Экшн-камера</span>
@@ -156,19 +203,29 @@
         </ul>
         <h2 class="services-title">Доставка</h2>
         <p class="services-text">
+          Если из-за возгорания купленного у нас товара у вас сгорит дом — не
+          переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+        </p>
+        <h2 class="services-title">Гарантия</h2>
+        <p class="services-text">
           Мы с удовольствием доставим ваш товар прямо к вашему подъезду
           совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш
           этаж.
         </p>
-        <span class="visually-hidden">Иконка человека</span>
+        <h2 class="services-title">Кредит</h2>
+        <p class="services-text">
+          Залезть в долговую яму стало проще! Кредитные консультанты подберут
+          для вас наиболее выгодные условия кредита. Выгодные для банка,
+          разумеется.
+        </p>
       </section>
-      <!--Этот блок я решила сделать article, потому что я думаю он может быть легко переиспользован на ругих страницах-->
       <article class="delivery">
-        <span class="visually-hidden">Иконка автомобиля</span>
-        <button class="delivery-button">Доставим редкий товар под заказ</button>
-        <button class="delivery-information">
-          <span class="visually-hidden">Информация</span>
-        </button>
+        <a class="delivery-button" href="#">
+          Доставим редкий товар под заказ
+          <button class="delivery-information">
+            <span class="visually-hidden">Информация</span>
+          </button>
+        </a>
       </article>
       <section class="about">
         <h2 class="about-title">О нас</h2>
@@ -207,7 +264,6 @@
         </ul>
         <a class="contacts-link" href="#">Напишите нам</a>
       </section>
-      <!--считаю что рассылка, тоже может быть переиспользована на других страницах, поэтому сделала ее article-->
       <article class="mailing">
         <h2 class="mailing-title">Подпишитесь на рассылку</h2>
         <p class="mailing-text">
@@ -216,16 +272,15 @@
         </p>
         <form class="mailing-form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="mailing-letter">Email</label>
-          <input class="mailing-field" id="mailing-letter" type="email" placeholder="Ваш e-mail">
+          <input class="mailing-field" id="mailing-letter" type="email" placeholder="Ваш e-mail"/>
           <button class="mailing-button" type="submit">Подписаться</button>
         </form>
-        <span class="visually-hidden">Подтверждение</span>
         <p class="mailing-terms">Это бесплатно</p>
       </article>
     </main>
     <footer class="page-footer">
       <section class="footer-address">
-        <img class="footer-address-logo" src="#" alt="Логотип магазина Device">
+        <img class="footer-address-logo" src="#" alt="Логотип магазина Device"/>
         <address class="footer-address">
           <p class="footer-address-text">
             Санкт-Петербург, набережная реки Карповки, 5, литера П.
@@ -248,17 +303,17 @@
       <section class="footer-social">
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a class="footer-social-button" href="#">
+            <a class="footer-social-button" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="footer-social-button" href="#">
+            <a class="footer-social-button" href="https://twitter.com/htmlacademy_ru">
               <span class="visually-hidden">Твиттер</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="footer-social-button" href="#">
+            <a class="footer-social-button" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Ютьюб</span>
             </a>
           </li>
@@ -267,7 +322,7 @@
       <section class="footer-contacts">
         <a class="footer-contacts-tel" href="tel:8812812-12-12">+7 (812) 812-12-12</a>
         <a class="footer-contacts-made_in" href="https://htmlacademy.ru/">
-          <img class="footer-contacts-logo" src="#" alt="Логотип академии">
+          <img class="footer-contacts-logo" src="#" alt="Логотип академии"/>
         </a>
       </section>
     </footer>
