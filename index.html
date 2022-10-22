@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -210,25 +211,29 @@
           Если из-за возгорания купленного у нас товара у вас сгорит дом — не
           переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
         </p>
+        <!--вставила спан, просто не понимаю как без этого тогда вставить фоновую картинку?-->
+        <span class="visually-hidden delivery-man-icon">Иконка доставки</span>
         <h2 class="services-title">Гарантия</h2>
         <p class="services-text">
           Мы с удовольствием доставим ваш товар прямо к вашему подъезду
           совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш
           этаж.
         </p>
+        <span class="visually-hidden guarantee-icon" width="136" height="164">Иконка гарантии</span>
         <h2 class="services-title">Кредит</h2>
         <p class="services-text">
           Залезть в долговую яму стало проще! Кредитные консультанты подберут
           для вас наиболее выгодные условия кредита. Выгодные для банка,
           разумеется.
         </p>
+        <span class="visually-hidden credit-icon">Иконка человека,несущего карту</span>
       </section>
       <article class="delivery">
         <a class="delivery-button" href="#">
           <img class="delivery-icon" src="images/delivery-icon.svg" alt="Машина доставки." width="47" height="31">
           Доставим редкий товар под заказ
           <span class="tabindex=0">
-            <span class="visually-hidden">Информация</span>
+            <span class="visually-hidden information-icon">Информация</span>
           </span>
         </a>
       </article>
@@ -280,6 +285,7 @@
           <input class="mailing-field" id="mailing-letter" type="email" placeholder="Ваш e-mail">
           <button class="mailing-button" type="submit">Подписаться</button>
         </form>
+        <span class="visually-hidden okay-icon">Иконка подтверждения</span>
         <p class="mailing-terms">Это бесплатно</p>
       </article>
     </main>
@@ -325,7 +331,7 @@
         </ul>
       </section>
       <section class="footer-contacts">
-        <a class="footer-contacts-tel" href="tel:8812812-12-12">+7 (812) 812-12-12</a>
+        <a class="footer-contacts-tel" href="tel:8812812-12-12">Тел:+7 (812) 812-12-12</a>
         <a class="footer-contacts-made_in" href="https://htmlacademy.ru/">
           <img class="footer-contacts-logo" src="images/academy-logo.svg" alt="Логотип академии." width="114" height="36">
         </a>
