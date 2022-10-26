@@ -2,24 +2,27 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
-  src: url(../fonts/raleway/raleway-800.woff2) format(woff2);
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
   font-display: swap;
 }
+
 @font-face {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/rubik/rubik-400.woff2) format(woff2);
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
   font-display: swap;
 }
+
  @font-face {
    font-family: "Rubik";
    font-style: normal;
    font-weight: 700;
-   src: url(../fonts/rubik/rubik-700.woff2) format(woff2);
+   src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
    font-display: swap;
  }
-body{
+
+body {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -28,30 +31,35 @@ body{
   background-color: #FFFFFF;
   color:#000000;
 }
+
 /*Header*/
-/*Вот думаю этот блок наверное лучше не к хедеру присвоить, а сделать отдельный див и к нему этот цвет*/
-.page-header{
+.page-header {
   background-color: #FFE17F;
 }
+
 .navigation-list,
-.navigation-list-more{
+.navigation-list-more {
   list-style-type: none;
 }
+
 .navigation-search,
-.navigation-find{
+.navigation-find {
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
 }
-.navigation-link{
+
+.navigation-link {
   text-decoration: none;
   color: inherit;
 }
-.navigation-item-menu{
+
+.navigation-item-menu {
   list-style-type: none;
 }
-.navigation-menu-link{
+
+.navigation-menu-link {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   line-height: 21px;
@@ -59,30 +67,35 @@ body{
   text-decoration: none;
   color: inherit;
 }
-.navigation-more-link{
+
+.navigation-more-link {
   font-size: 16px;
   line-height: 18px;
   color: inherit;
   text-decoration: none;
 }
+
 /*Main*/
 /*эта цифра у меня белая, но сейчас она в блоке с белым фоном, полагаю это поправится с помощью сетки, как быть сейчас?
 и еще почему-то отличается шрифт, хотя это тоже rubik */
-.product-number{
+.product-number {
   font-weight: 700;
   font-size: 180px;
   color: inherit;
 }
-.product-title{
+
+.product-title {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
 }
-.product-description{
+
+.product-description {
   color:#444444;
 }
-.product-link{
+
+.product-link {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   line-height: 21px;
@@ -93,45 +106,55 @@ body{
   text-decoration: none;
   color: inherit;
 }
-.product-advanteges-list{
+
+.product-advanteges-list {
   list-style-type: none;
   font-size: 16px;
 }
-.product-property{
+
+.product-property {
   font-weight: 400;
   font-size: 36px;
 }
-.product-property-desription{
+
+.product-property-desription {
   color:#444444;
 }
-.products-menu-item{
+
+.products-menu-item {
   list-style-type: none;
 }
-.products-menu-link{
+
+.products-menu-link {
   text-decoration: none;
   color: inherit;
 }
-.products-menu-title{
+
+.products-menu-title {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   line-height: 24px;
   letter-spacing: -0.02em;
 }
-.products-menu-icon{
+
+.products-menu-icon {
   background-color: #FFE17F;
   width: 160px;
   height: 160px;
 }
+
 /*servises*/
 /*тут тот же вопрос насчет div, лучше через него цвета присваивать, а не всмему блоку?*/
-.services{
+.services {
   background-color: #F0F0F0;
 }
-.services-item{
+
+.services-item {
     list-style-type: none;
 }
-.services-button{
-  font-family: 'Raleway',sans-serif;
+
+.services-button {
+  font-family: "Raleway",sans-serif;
   font-style: normal;
   font-weight: 800;
   line-height: 21px;
@@ -140,33 +163,40 @@ body{
   text-transform: uppercase;
   color: inherit;
 }
-.services-title{
-  font-family: 'Raleway',sans-serif;
+
+.services-title {
+  font-family: "Raleway",sans-serif;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
 }
-.services-text{
+
+.services-text {
   color: #444444;
 }
+
 /*добавила декоротивные картинки*/
-.delivery-man-icon{
-  background-image: url(../images/delivery-man-icon.svg);
+.delivery-man-icon {
+  background-image: url("../images/delivery-man-icon.svg");
   background-repeat: no-repeat;
 }
-.guarantee-icon{
-  background-image: url(../images/services-icon.svg);
+
+.guarantee-icon {
+  background-image: url("../images/services-icon.svg");
   background-repeat: no-repeat;
 }
-.credit-icon{
-  background-image: url(../images/cash-man-icon.svg);
+
+.credit-icon {
+  background-image: url("../images/cash-man-icon.svg");
   background-repeat: no-repeat;
 }
+
 /*Delivery button*/
-.delivery-icon{
+.delivery-icon {
   background-color: #FFE17F;
 }
-.delivery-button{
+
+.delivery-button {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
@@ -178,29 +208,34 @@ body{
   background-color: #F0F0F0;
   color: inherit;
 }
+
 /*тоже декоративное изображение*/
-.information-icon{
-  background-image: url(../images/information-icon.svg);
+.information-icon {
+  background-image: url("../images/information-icon.svg");
   background-repeat: no-repeat;
 }
+
 /*About, contacts*/
 .about-title,
-.contacts-title{
+.contacts-title {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
 }
+
 .about-description,
-.contacts-description{
+.contacts-description {
   color:#444444;
 }
-.about-item{
+
+.about-item {
   font-weight: 700;
   line-height: 20px;
 }
+
 .about-link,
-.contacts-link{
+.contacts-link {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   line-height: 21px;
@@ -211,36 +246,44 @@ body{
   background-color: #FFE17F;
   color: inherit;
 }
-.contacts-subtitle{
+
+.contacts-subtitle {
   font-weight: 700;
   font-size: 24px;
   color:#444444;
 }
-.contacts-address{
+
+.contacts-address {
   font-style: inherit;
   color:#444444;
 }
-.contacts-phone{
+
+.contacts-phone {
   color:#444444;
 }
-.contacts-scedule-item{
+
+.contacts-scedule-item {
   list-style: none;
   color: #444444;
 }
+
 /*Subscription*/
-.mailing{
+.mailing {
   background-color:#F0F0F0;
 }
-.mailing-title{
+
+.mailing-title {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
 }
-.mailing-text{
+
+.mailing-text {
   color: #444444;
 }
-.mailing-button{
+
+.mailing-button {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: inherit;
@@ -249,25 +292,30 @@ body{
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-.okay-icon{
+
+.okay-icon {
   background-image: url(../images/tick-big.svg);
   background-size: 14px 14px;
   background-repeat: no-repeat;
 }
-.mailing-terms{
+
+.mailing-terms {
   color: #444444;
 }
-.page-footer{
+
+.page-footer {
   background-color: #444444;
   color: #FFFFFF;
 }
+
 /*Footer*/
-.footer-address{
+.footer-address {
   font-style: inherit;
   font-size: 16px;
   line-height: 20px;
 }
-.footer-menu-item{
+
+.footer-menu-item {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   line-height: 21px;
@@ -275,73 +323,86 @@ body{
   text-transform: uppercase;
   list-style: none;
 }
-.footer-menu-link{
+
+.footer-menu-link {
   text-decoration: none;
   color: #FFFFFF;
 }
-.footer-social-item{
+
+.footer-social-item {
   list-style: none;
 }
-.footer-contacts-tel{
+
+.footer-contacts-tel {
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
 }
+
 /*Стили Catalog*/
-.inner-header-title{
+.inner-header-title {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
 }
-.breadcrumbs-item{
+
+.breadcrumbs-item {
   list-style: none;
 }
-.breadcrumbs-link{
+
+.breadcrumbs-link {
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
   color: inherit;
 }
-.catalog-filter{
+
+.catalog-filter {
   background-color: #F0F0F0;
 }
-.filter-title{
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-.variety-title{
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
 
+.filter-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
+
+.variety-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
 .product-card-list,
-.variety{
+.variety {
   background-color: #FFFFFF;
 }
-.cost{
+
+.cost {
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
 }
-.filter-group{
+
+.filter-group {
   font-size: 16px;
   line-height: 20px;
 }
-.filter-group-title{
+
+.filter-group-title {
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
 }
-.filter-button{
+
+.filter-button {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   line-height: 21px;
@@ -349,28 +410,34 @@ body{
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-.select-control{
+
+.select-control {
   font: inherit;
 }
-.product-card-item{
+
+.product-card-item {
   list-style: none;
 }
-.product-title-catalog{
+
+.product-title-catalog {
   font-size: inherit;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
 }
-.product-card-link{
+
+.product-card-link {
   text-decoration: none;
   color: inherit;
 }
-.product-price{
+
+.product-price {
   line-height: 21px;
   color: #444444;
   text-align: right;
 }
-.more-products{
+
+.more-products {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 16px;
@@ -379,17 +446,20 @@ body{
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-.pagination-item{
+
+.pagination-item {
   list-style: none;
   background-color: #F0F0F0;
 }
-.pagination-link{
+
+.pagination-link {
   font-size: 16px;
   text-decoration: none;
   color:#444444;
 }
+
 .pagination-prev,
-.pagination-next{
+.pagination-next {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   line-height: 21px;
