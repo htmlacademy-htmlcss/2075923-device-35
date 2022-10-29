@@ -1,4 +1,4 @@
-@font-face{
+@font-face {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
@@ -14,32 +14,124 @@
   font-display: swap;
 }
 
- @font-face {
-   font-family: "Rubik";
-   font-style: normal;
-   font-weight: 700;
-   src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
-   font-display: swap;
- }
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
 
 body {
+  display: flex;
+  flex-direction: column;
+  width: 1440px;
+  margin: 0 auto;
+  min-height: 100%;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
   line-height: 30px;
   background-color: #FFFFFF;
-  color:#000000;
+  color: #000000;
 }
 
 /*Header*/
 .page-header {
   background-color: #FFE17F;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.page-header-logo {
+  display: flex;
+  justify-content: flex-start;
+  width: 1040px;
+  margin: 0 auto;
+}
+
+/*отделила навигацию первого уровня (поиск, войти, сравнить, корзина)*/
+.navigation-first-line-conteiner {
+  display: flex;
+  width: 1040px;
+  margin: 0 auto;
+}
+
+.navigation-form {
+  width: 517px;
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: flex-end;
+  width: 520px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-icon {
+  margin-right: 12px;
+}
+
+.navigation-item {
+  display: flex;
+  margin-right: 36px;
+  padding: 0;
+}
+
+.navigation-item:first-child {
+  width: 231px;
+  margin-right: 26px;
+}
+
+.navigation-item:last-child {
+  margin-right: 0;
+}
+
+/*навигация второго уровня*/
+.navigation-list-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 1040px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.navigation-item-menu:not(:last-child) {
+  margin-right: 45px;
+}
+
+.navigation-item-menu:first-child {
+  width: 293px;
+  margin-right: 276px;
+}
+
+.navigation-plus-icon {
+  margin-left: 24px;
 }
 
 .navigation-list,
 .navigation-list-more {
   list-style-type: none;
+}
+
+/*выпадающее меню.изначално у меня это один список, но теперь думаю, стоит ли их поделить на три списка, чтобы могла каждому списку задать размер?или есть другой способ внутри списка перераспределять положение.*/
+.navigation-list-more {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 675px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-item-more {
+  margin-right: 56px;
 }
 
 .navigation-search,
@@ -78,7 +170,48 @@ body {
 /*Main*/
 /*эта цифра у меня белая, но сейчас она в блоке с белым фоном, полагаю это поправится с помощью сетки, как быть сейчас?
 и еще почему-то отличается шрифт, хотя это тоже rubik */
+.main-conteiner {
+  flex-grow: 1;
+}
+
+.product-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+/*Slider*/
+.slider-conteiner {
+  width: 560px;
+  margin-right: 40px;
+  padding: 0;
+}
+
+/*Описание к продукту.Поставить пока justify-content чтобы раздвинуть блоки, а то они слипались*/
+.product-description-conteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 560px;
+  margin: 0;
+  padding: 0;
+}
+
+.product-advanteges-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 16px;
+}
+
+.product-advanteges-item {
+  margin-right: 20px;
+}
+
 .product-number {
+  margin: 0;
   font-weight: 700;
   font-size: 180px;
   color: inherit;
@@ -92,10 +225,11 @@ body {
 }
 
 .product-description {
-  color:#444444;
+  color: #444444;
 }
 
 .product-link {
+  width: 210px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   line-height: 21px;
@@ -107,22 +241,35 @@ body {
   color: inherit;
 }
 
-.product-advanteges-list {
-  list-style-type: none;
-  font-size: 16px;
-}
-
 .product-property {
   font-weight: 400;
   font-size: 36px;
 }
 
 .product-property-desription {
-  color:#444444;
+  color: #444444;
+}
+
+/*Блок  с меню товаров*/
+.products-menu {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.products-menu-list {
+  display: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 .products-menu-item {
   list-style-type: none;
+  margin-right: 40px;
+}
+
+.products-menu-item:last-child {
+  margin: 0;
 }
 
 .products-menu-link {
@@ -144,17 +291,35 @@ body {
 }
 
 /*servises*/
-/*тут тот же вопрос насчет div, лучше через него цвета присваивать, а не всмему блоку?*/
 .services {
+  display: flex;
+  width: 1440px;
   background-color: #F0F0F0;
 }
 
+.main-services-conteiner {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.services-list {
+  width: 280px;
+  margin: 0;
+  padding: 0;
+}
+
+.servises-conteiner {
+  width: 452px;
+  margin: 0 auto;
+}
+
 .services-item {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .services-button {
-  font-family: "Raleway",sans-serif;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
   line-height: 21px;
@@ -165,7 +330,7 @@ body {
 }
 
 .services-title {
-  font-family: "Raleway",sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
@@ -175,7 +340,13 @@ body {
   color: #444444;
 }
 
-/*добавила декоротивные картинки*/
+/*Кнопка доставки*/
+.delivery {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .delivery-man-icon {
   background-image: url("../images/delivery-man-icon.svg");
   background-repeat: no-repeat;
@@ -197,6 +368,7 @@ body {
 }
 
 .delivery-button {
+  margin: 0 auto;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
@@ -209,13 +381,27 @@ body {
   color: inherit;
 }
 
-/*тоже декоративное изображение*/
+/*декоративное изображение*/
 .information-icon {
   background-image: url("../images/information-icon.svg");
   background-repeat: no-repeat;
 }
 
 /*About, contacts*/
+.about-contacts-conteiner {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.about {
+  margin-right: 108px;
+}
+
+.about-description {
+  width: 520px;
+}
+
 .about-title,
 .contacts-title {
   font-family: "Raleway", sans-serif;
@@ -226,7 +412,7 @@ body {
 
 .about-description,
 .contacts-description {
-  color:#444444;
+  color: #444444;
 }
 
 .about-item {
@@ -247,19 +433,28 @@ body {
   color: inherit;
 }
 
+.contacts-description {
+  width: 514px;
+  margin: 0;
+}
+
 .contacts-subtitle {
   font-weight: 700;
   font-size: 24px;
-  color:#444444;
+  color: #444444;
 }
 
 .contacts-address {
   font-style: inherit;
-  color:#444444;
+  color: #444444;
 }
 
 .contacts-phone {
-  color:#444444;
+  color: #444444;
+}
+
+.contacts-scedule {
+  padding: 0;
 }
 
 .contacts-scedule-item {
@@ -269,10 +464,20 @@ body {
 
 /*Subscription*/
 .mailing {
-  background-color:#F0F0F0;
+  width: 1440px;
+  background-color: #F0F0F0;
+}
+
+.mailing-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .mailing-title {
+  width: 348px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
@@ -280,6 +485,7 @@ body {
 }
 
 .mailing-text {
+  width: 560px;
   color: #444444;
 }
 
@@ -294,7 +500,7 @@ body {
 }
 
 .okay-icon {
-  background-image: url(../images/tick-big.svg);
+  background-image: url("../images/tick-big.svg");
   background-size: 14px 14px;
   background-repeat: no-repeat;
 }
@@ -303,16 +509,36 @@ body {
   color: #444444;
 }
 
+/*Footer*/
 .page-footer {
+  width: 1440px;
   background-color: #444444;
   color: #FFFFFF;
 }
 
-/*Footer*/
+.page-footer-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .footer-address {
   font-style: inherit;
   font-size: 16px;
   line-height: 20px;
+  width: 239px;
+}
+
+.footer-menu-conteiner {
+  width: 444px;
+}
+
+.footer-menu-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
 }
 
 .footer-menu-item {
@@ -329,8 +555,23 @@ body {
   color: #FFFFFF;
 }
 
+.footer-social {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
 .footer-social-item {
-  list-style: none;
+  list-style-type: none;
+}
+
+.footer-contacts {
+  width: 175px;
 }
 
 .footer-contacts-tel {
@@ -340,15 +581,27 @@ body {
 }
 
 /*Стили Catalog*/
+.inner-header {
+  display: flex;
+  flex-direction: column;
+  width: 1079px;
+  margin: 0 auto;
+}
+
 .inner-header-title {
+  width: 541;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
 }
 
-.breadcrumbs-item {
-  list-style: none;
+.breadcrumbs {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  padding: 0;
+  list-style-type: none;
 }
 
 .breadcrumbs-link {
@@ -359,7 +612,14 @@ body {
 }
 
 .catalog-filter {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
   background-color: #F0F0F0;
+}
+
+.filter {
+  width: 320px;
 }
 
 .filter-title {
@@ -369,6 +629,11 @@ body {
   line-height: 19px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.catalog-right-column {
+  width: 840px;
+  margin-left: 40px;
 }
 
 .variety-title {
@@ -392,8 +657,14 @@ body {
 }
 
 .filter-group {
+  padding: 0;
   font-size: 16px;
   line-height: 20px;
+}
+
+.filter-group-list {
+  list-style-type: none;
+  padding: 0;
 }
 
 .filter-group-title {
@@ -455,7 +726,7 @@ body {
 .pagination-link {
   font-size: 16px;
   text-decoration: none;
-  color:#444444;
+  color: #444444;
 }
 
 .pagination-prev,
