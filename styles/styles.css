@@ -29,7 +29,6 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  width: 1440px;
   margin: 0 auto;
   min-height: 100%;
   font-family: "Rubik", sans-serif;
@@ -115,12 +114,10 @@ body {
   margin-left: 24px;
 }
 
-.navigation-list,
-.navigation-list-more {
+.navigation-list {
   list-style-type: none;
 }
 
-/*выпадающее меню.изначално у меня это один список, но теперь думаю, стоит ли их поделить на три списка, чтобы могла каждому списку задать размер?или есть другой способ внутри списка перераспределять положение.*/
 .navigation-list-more {
   display: flex;
   flex-wrap: wrap;
@@ -130,8 +127,25 @@ body {
   padding: 0;
 }
 
-.navigation-item-more {
-  margin-right: 56px;
+.navigation-list-more-first-column {
+  width: 211px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navigation-list-more-second-column {
+  width: 211px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navigation-list-more-third-column {
+  width: 211px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .navigation-search,
@@ -168,15 +182,12 @@ body {
 }
 
 /*Main*/
-/*эта цифра у меня белая, но сейчас она в блоке с белым фоном, полагаю это поправится с помощью сетки, как быть сейчас?
-и еще почему-то отличается шрифт, хотя это тоже rubik */
 .main-conteiner {
   flex-grow: 1;
 }
 
 .product-gallery {
   display: flex;
-  flex-wrap: wrap;
   width: 1160px;
   margin: 0 auto;
 }
@@ -293,7 +304,6 @@ body {
 /*servises*/
 .services {
   display: flex;
-  width: 1440px;
   background-color: #F0F0F0;
 }
 
@@ -464,7 +474,6 @@ body {
 
 /*Subscription*/
 .mailing {
-  width: 1440px;
   background-color: #F0F0F0;
 }
 
@@ -511,7 +520,6 @@ body {
 
 /*Footer*/
 .page-footer {
-  width: 1440px;
   background-color: #444444;
   color: #FFFFFF;
 }
@@ -589,7 +597,7 @@ body {
 }
 
 .inner-header-title {
-  width: 541;
+  width: 541px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
@@ -613,9 +621,14 @@ body {
 
 .catalog-filter {
   display: flex;
-  width: 1160px;
   margin: 0 auto;
   background-color: #F0F0F0;
+}
+
+.filter-all-conteiner {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .filter {

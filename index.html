@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
+
   <body>
     <header class="page-header">
       <a class="page-header-logo" href="#">
         <img class="logo" src="images/device-logo.svg" alt="Логотип магазина Device." width="145" height="36">
       </a>
       <nav class="navigation">
-        <!--обернула верхний уровень меню в контейнер-->
         <div class="navigation-first-line-conteiner">
           <form class="navigation-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="navigation-label">
@@ -53,33 +54,38 @@
             <a class="navigation-menu-link" href="#">Контакты</a>
           </li>
         </ul>
-        <ul class="navigation-list-more">
-          <li class="navigation-item-more">
-            <a class="navigation-more-link" href="#">Виртуальная реальность</a>
-          </li>
-          <li class="navigation-item-more">
-            <a class="navigation-more-link" href="#">Моноподы для cелфи</a>
-          </li>
-          <li class="navigation-item-more">
-            <a class="navigation-more-link" href="#">Экшн-камеры</a>
-          </li>
-          <li class="navigation-item-more">
-            <a class="navigation-more-link" href="#">Фитнес-браслеты</a>
-          </li>
-          <li class="navigation-item-more">
-            <a class="navigation-more-link" href="#">Умные часы</a>
-          </li>
-          <li class="navigation-item-more">
-            <a class="navigation-more-link" href="#">Квадрокоптеры</a>
-          </li>
-        </ul>
+        <div class="navigation-list-more">
+          <ul class="navigation-list-more-first-column">
+            <li class="navigation-item-more">
+              <a class="navigation-more-link" href="#">Виртуальная реальность</a>
+            </li>
+            <li class="navigation-item-more">
+              <a class="navigation-more-link" href="#">Моноподы для cелфи</a>
+            </li>
+            <li class="navigation-item-more">
+              <a class="navigation-more-link" href="#">Экшн-камеры</a>
+            </li>
+          </ul>
+          <ul class="navigation-list-more-second-column">
+            <li class="navigation-item-more">
+              <a class="navigation-more-link" href="#">Фитнес-браслеты</a>
+            </li>
+            <li class="navigation-item-more">
+              <a class="navigation-more-link" href="#">Умные часы</a>
+            </li>
+          </ul>
+          <ul class="navigation-list-more-third-column">
+            <li class="navigation-item-more">
+              <a class="navigation-more-link" href="#">Квадрокоптеры</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="main-conteiner">
-      <h1 class="visually-hidden" hidden>Интернет-магазин техники Device</h1>
+      <h1 class="visually-hidden">Интернет-магазин техники Device</h1>
       <section class="product-gallery">
-        <h2 class="visually-hidden" hidden>Фотогалерея товаров</h2>
-        <!--задала слайдеру контейнер.И пересла все контентные фото друг за другом и поставила их между кнопками, не знаю насколько это верный подход, но пока так кажется логичнее-->
+        <h2 class="visually-hidden">Фотогалерея товаров</h2>
         <div class="slider-conteiner">
           <button class="slider-image-prev" type="button">
             <img class="arrow-tall-icon" src="images/arrow-tall-icon.svg" alt="Предыдущее фото." width="20" height="20">
@@ -163,8 +169,9 @@
           </ul>
         </div>
       </section>
-      <h2 class="visually-hidden" hidden>Меню товаров</h2>
       <section class="products-menu">
+        <!--внесла обратно в секцию, и получается сейчас этот блок двигает рядом стоящие, отчего сетка немного не такая как была, это ок?-->>
+        <h2 class="visually-hidden">Меню товаров</h2>
         <ul class="products-menu-list">
           <li class="products-menu-item">
             <a class="products-menu-link" href="#">
@@ -358,4 +365,5 @@
       </div>
     </footer>
   </body>
+
 </html>
