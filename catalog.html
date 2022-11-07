@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>Моноподы для селфи</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
+
   <body>
     <header class="page-header">
       <a class="page-header-logo" href="#">
@@ -208,32 +210,36 @@
                 </li>
               </ul>
               <button class="more-products" type="button">Загрузить еще</button>
-              <ul class="pagination-list">
-                <li class="pagination-item">
-                  <a class="pagination-link pagination-prev pagination-disabled" href="#">Назад</a>
-                </li>
-                <!--Вот думаю, стоит ли вынести цифры в отдельный список, потому что им бы хорошо было задать кантейнер в котором выравнивать-->
-                <li class="pagination-item">
-                  <a class="pagination-link pagination-current" href="#">1</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">2</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">3</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">
-                    <span class="visually-hidden">4-14</span>
-                  </a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">15</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link pagination-next" href="#">Вперед</a>
-                </li>
-              </ul>
+              <div class="pagination-list">
+                <!--я вынесла в отдельный список, но что-то не могу понять как теперь их поставить корректно.мысли только один список в другой вложить, так можно?-->
+                <ul class="pagination-prev-next">
+                  <li class="pagination-item">
+                    <a class="pagination-link pagination-prev pagination-disabled" href="#">Назад</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link pagination-next" href="#">Вперед</a>
+                  </li>
+                </ul>
+                <ul class="pagination-list-number">
+                  <li class="pagination-item">
+                    <a class="pagination-link pagination-current" href="#">1</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">2</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">3</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">
+                      <span class="visually-hidden">4-14</span>
+                    </a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">15</a>
+                  </li>
+                </ul>
+              </div>
             </section>
           </div>
         </div>
@@ -295,4 +301,5 @@
       </div>
     </footer>
   </body>
+
 </html>

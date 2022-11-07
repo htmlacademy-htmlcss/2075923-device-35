@@ -31,6 +31,7 @@ body {
   flex-direction: column;
   margin: 0 auto;
   min-height: 100%;
+  width: min-content;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -894,11 +895,13 @@ body {
 
 .pagination-list {
   display: flex;
-  width: 760px;
   padding: 0;
   margin: 0 auto;
 }
 
+.pagination-list-number {
+  display: flex;
+}
 .pagination-item {
   padding: 10px;
   list-style-type: none;
@@ -913,7 +916,7 @@ body {
 }
 
 .pagination-item:first-child,
-.pagination-item:last-child {
+ {
   padding: 25px;
 }
 
@@ -921,7 +924,6 @@ body {
   margin-right: 146px;
 }
 
-/*Пока сделала отступ слева у этой кнопки, пока не вынесла цифры в отдельный список*/
 .pagination-next {
   margin-left: 146px;
 }
