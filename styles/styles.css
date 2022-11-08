@@ -128,6 +128,7 @@ body {
   list-style-type: none;
 }
 
+/*вот думаю этот блок можно было бы сделать через гриды, но единственное в макете у них неоднородные отступы.*/
 .navigation-list-more {
   display: flex;
   flex-wrap: wrap;
@@ -279,23 +280,29 @@ body {
   margin: 0 auto;
 }
 
+/*для этрого думаю лучше подходят гриды*/
 .products-menu-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6,160px);
+  width: min-content;
+  gap: 70px 40px;
+  padding: 0;
+  /*display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  margin-bottom: 70px;
+  margin-bottom: 70px;*/
 }
 
 .products-menu-item {
   list-style-type: none;
-  max-width: 160px;
-  margin-right: 40px;
+  /*max-width: 160px;
+  margin-right: 40px;*/
 }
 
-.products-menu-item:last-child {
+/*.products-menu-item:last-child {
   margin: 0;
-}
+}*/
 
 .products-menu-link {
   text-decoration: none;
@@ -403,7 +410,6 @@ body {
   margin-bottom: 70px;
 }
 
-/*не понимаю что за дополнительный отступ возникает, при этом если убрать ссылку <a> то иконка встает в это серое поле ровно*/
 .delivery-icon-button {
   display: block;
   margin: 0;
@@ -577,6 +583,7 @@ body {
   color: #444444;
 }
 
+/*еще думаю что футер можнго было бы сделать гридами, но вот такая же проблема с разными отступами у блоков( блоки имею ввиду 1)лого+адрес 2)меню и соц сети 3)тел и лого)*/
 /*Footer*/
 .page-footer {
   background-color: #444444;
@@ -785,7 +792,6 @@ body {
   background-color: #FFFFFF;
 }
 
-/*здесь сделала через padding, хотя логичнее было бы делать margin-bottom.Но пока не поняла как продлить белый цвет блока.*/
 .variety {
   padding-bottom: 78px;
 }
@@ -843,26 +849,29 @@ body {
 }
 
 .product-card-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2,360px);
+  gap: 70px 40px;
   margin: 0;
-  padding: 0;
-  padding-left: 40px;
+  /*тут я добавляю через падинги, чтоьбы у меня тянулся белый фон подложка.*/
   padding-top: 70px;
-}
-
-.product-card-item {
+  padding-bottom: 44px;
+  padding-right: 40px;
   list-style-type: none;
 }
 
-.product-card-item {
-  margin-right: 40px;
-  margin-bottom: 44px;
+/*я сделала контейнер для заголовка у карточки и цены и сделала их через грид, мне показалось здесь логичнее через грид*/
+.product-grid-conteiner {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.product-img {
+  margin-bottom: 32px;
 }
 
 .product-title-catalog {
   margin: 0;
-  margin-top: 32px;
   font-size: inherit;
   font-weight: 700;
   line-height: 20px;
@@ -870,6 +879,8 @@ body {
 }
 
 .product-card-link {
+  margin: 0;
+  padding: 0;
   text-decoration: none;
   color: inherit;
 }
@@ -878,6 +889,7 @@ body {
   margin: 0;
   line-height: 21px;
   color: #444444;
+  grid-column-start: -1;
 }
 
 .more-products {
@@ -895,13 +907,19 @@ body {
 
 .pagination-list {
   display: flex;
+  width: 760px;
+  align-items: center;
   padding: 0;
   margin: 0 auto;
+  background-color: #F0F0F0;
 }
 
 .pagination-list-number {
   display: flex;
+  margin: 0 auto;
+  padding: 0;
 }
+
 .pagination-item {
   padding: 10px;
   list-style-type: none;
@@ -915,17 +933,9 @@ body {
   color: #444444;
 }
 
-.pagination-item:first-child,
- {
-  padding: 25px;
-}
-
-.pagination-prev {
-  margin-right: 146px;
-}
-
 .pagination-next {
   margin-left: 146px;
+  padding: 25px;
 }
 
 .pagination-prev,
