@@ -25,7 +25,8 @@
               <li class="navigation-item">
                 <a class="navigation-link" href="#">
                   <span class="login">Войти</span>
-                  <span class="login-name visually-hidden">Коля Петухов</span>
+                  <span class="login login-name visually-hidden">Коля Петухов</span>
+                  <span class="login login-out visually-hidden">Выйти</span>
                   <svg class="navigation-icon" aria-hidden="true" focusable="false" width="15" height="12"
                     viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -47,6 +48,7 @@
               </li>
               <li class="navigation-item">
                 <a class="navigation-link" href="#">
+                  <span class="navigation-item-number">2</span>
                   <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="15"
                     viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_11518_3329)">
@@ -62,12 +64,60 @@
                   </svg>
                   <span>Корзина</span>
                 </a>
+                <div class="popover popover-cart">
+                  <div class="popover-content">
+                    <ul class="cart-items-list">
+                      <li class="cart-item">
+                        <div class="product-name" tabindex="0">
+                          <img class="product-card-image" src="images/product-1.jpeg" alt="Любительская селфи-палка."
+                            width="39" height="43">
+                          <p class="cart-item-title">Любительская селфи-палка</p>
+                        </div>
+                        <button class="cart-item-button" type="button">
+                          <svg aria-hidden="true" focusable="false" width="10" height="11" viewBox="0 0 10 11"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M10 1.68692L9.09091 0.777832L5 4.86874L0.909091 0.777832L0 1.68692L4.09091 5.77783L0 9.86874L0.909091 10.7778L5 6.68692L9.09091 10.7778L10 9.86874L5.90909 5.77783L10 1.68692Z"
+                              fill="white"/>
+                          </svg>
+                          <span class="visually-hidden">Удалить из корзины</span>
+                        </button>
+                      </li>
+                      <li class="cart-item">
+                        <div class="product-name" tabindex="0">
+                          <img class="product-card-image" src="images/product-2.jpeg"
+                            alt="Профессиональная селфи-палка." width="39" height="43">
+                          <p class="cart-item-title">Профессиональная
+                            селфи-палка</p>
+                        </div>
+                        <button class="cart-item-button" type="button">
+                          <svg aria-hidden="true" focusable="false" width="10" height="11" viewBox="0 0 10 11"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M10 1.68692L9.09091 0.777832L5 4.86874L0.909091 0.777832L0 1.68692L4.09091 5.77783L0 9.86874L0.909091 10.7778L5 6.68692L9.09091 10.7778L10 9.86874L5.90909 5.77783L10 1.68692Z"
+                              fill="white" />
+                          </svg>
+                          <span class="visually-hidden">Удалить из корзины</span>
+                        </button>
+                      </li>
+                    </ul>
+                    <p class="cart-information">
+                      <span>Товаров:
+                        <span class="cart-number">2</span>
+                      </span>
+                      <span>Сумма:
+                        <span class="cart-sum">2000</span> ₽
+                      </span>
+                    </p>
+                    <button type="submit" class="cart-button">Открыть корзину</button>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
           <div class="navigation-second-menu">
             <div class="navigation-catalog-conteiner">
-              <a class="navigation-menu-link navigation-menu-catalog-link current" href="catalog.html">
+              <a class="navigation-menu-link navigation-menu-catalog-link" href="catalog.html">
                 Каталог товаров
                 <svg class="navigation-plus-icon" aria-hidden="true" focusable="false" width="50" height="50"
                   viewBox="0 0 50 50" fill="none" opacity="0.3" xmlns="http://www.w3.org/2000/svg">
@@ -79,13 +129,13 @@
             </div>
             <ul class="navigation-list-menu">
               <li class="navigation-item-menu">
-                <a class="navigation-menu-link current" href="#">Доставка</a>
+                <a class="navigation-menu-link" href="#">Доставка</a>
               </li>
               <li class="navigation-item-menu">
-                <a class="navigation-menu-link current" href="#">Гарантия</a>
+                <a class="navigation-menu-link" href="#">Гарантия</a>
               </li>
               <li class="navigation-item-menu">
-                <a class="navigation-menu-link current" href="#">Контакты</a>
+                <a class="navigation-menu-link" href="#">Контакты</a>
               </li>
             </ul>
           </div>
@@ -248,7 +298,7 @@
             <li class="products-menu-item">
               <a class="products-menu-link" href="monopod.html">
                 <img class="products-menu-icon" src="images/monopod-icon.svg" alt="" width="160" height="160">
-                <h3 class="products-menu-title">Моноподы для селфи</h3>
+                <h3 class="products-menu-title">Моноподы<br> для селфи</h3>
               </a>
             </li>
             <li class="products-menu-item">
@@ -294,15 +344,15 @@
           <div class="servises-conteiner">
             <h2 class="services-title">Доставка</h2>
             <p class="services-text">
-              Если из-за возгорания купленного у нас товара у вас сгорит дом — не
-              переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+              Мы с удовольствием доставим ваш товар прямо к вашему подъезду
+                совершенно бесплатно! Ведь <br> мы неплохо заработаем, поднимая его на ваш
+                этаж.
             </p>
             <div class="display-none">
               <h2 class="services-title">Гарантия</h2>
               <p class="services-text">
-                Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-                совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш
-                этаж.
+                Если из-за возгорания купленного у нас товара у вас сгорит дом — не
+                переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
               </p>
               <h2 class="services-title">Кредит</h2>
               <p class="services-text">
@@ -331,7 +381,7 @@
         <section class="about">
           <h2 class="about-title">О нас</h2>
           <p class="about-description">
-            Огромный выбор гаджетов не оставит равнодушным гика, который есть в
+            Огромный выбор гаджетов не оставит равнодушным <br> гика, который есть в
             каждом из нас.
           </p>
           <p class="about-description">
@@ -348,7 +398,7 @@
         <section class="contacts">
           <h2 class="contacts-title">Контакты</h2>
           <p class="contacts-description">
-            Вы можете забрать товар сами, заехав в наш офис. Заодно сможете
+            Вы можете забрать товар сами, заехав в наш офис. <br> Заодно сможете
             проверить работоспособность покупки.
           </p>
           <h3 class="contacts-subtitle"><b>Интернет-магазин «Девайс»</b></h3>
@@ -370,7 +420,7 @@
         <div class="mailing-conteiner">
           <h2 class="mailing-title">Подпишитесь на рассылку</h2>
           <p class="mailing-text">
-            Еженедельный дайджест с обзорами новинок, длительными тест-драйвами,
+            Еженедельный дайджест с обзорами новинок,<br> длительными тест-драйвами,
             распаковками, а также акции, спецпредложения и вот это вот всё.
           </p>
           <form class="mailing-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -496,6 +546,74 @@
         </section>
       </div>
     </footer>
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-delivery">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="modal-fieldset">
+              <div class="field-group modal-name">
+                <label class="field-group-label" for="modal-name">Ваше имя:</label>
+                <input class="form-field oninput" type="text" id="modal-name" name="modal-name"
+                  placeholder="Введите имя">
+                <span class="field-span">Добавьте имя</span>
+              </div>
+              <div class="field-group modal-email">
+                <label class="field-group-label" for="modal-email">Ваш e-mail:</label>
+                <input class="form-field oninput" type="email" id="modal-email" name="modal-email"
+                  placeholder="Введите e-mail">
+                <span class="field-span">Забавный у вас адрес</span>
+              </div>
+            </div>
+            <div class="modal-fieldset">
+              <div class="field-group modal-order">
+                <label class="field-group-label" for="modal-order">Что нужно привезти:</label>
+                <input class="form-field oninput" type="text" id="modal-order" name="modal-order"
+                  placeholder="В свободной форме">
+              </div>
+              <div class="field-group modal-number">
+                <span class="field-group-label field-label-icon">
+                  <label class="field-group-label" for="modal-number">Количество:</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                      <svg aria-hidden="true" focusable="false" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="13" cy="13" r="13" fill="#FFE17F" />
+                        <path d="M14 7H12V9H14V7Z" fill="black" />
+                        <path d="M14 11H12V19H14V11Z" fill="black" />
+                      </svg>
+                    </button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label">Постараемся найти, сколько нужно.
+                      Привезём сколько получится по требованиям
+                      к провозу багажа.</span>
+                  </span>
+                </span>
+                <div class="modal-number-container">
+                  <button type="submit" class="modal-button number-minus">
+                    <svg aria-hidden="true" focusable="false" width="16" height="2" viewBox="0 0 16 2" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 0H0V2H16V0Z" fill="black" />
+                    </svg>
+                  </button>
+                  <input class="field-number" type="number" id="modal-number" value="1" name="modal-number" min="1"
+                    max="100">
+                  <button type="submit" class="modal-button number-plus">
+                    <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 7H9V0H7V7H0V9H7V16H9V9H16V7Z" fill="black"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="link modal-form-button" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 
 </html>
