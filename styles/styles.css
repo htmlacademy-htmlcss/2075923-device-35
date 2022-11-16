@@ -188,12 +188,12 @@ body {
   padding: 0;
 }
 
-.navigation-item:first-child {
-  width: 231px;
-}
-
 .navigation-item {
   position: relative;
+}
+
+.navigation-item:first-child {
+  width: 231px;
 }
 
 .navigation-item-number {
@@ -216,7 +216,6 @@ body {
   position: absolute;
   left: 12px;
 }
-
 
 /*навигация второго уровня*/
 .navigation-list-menu {
@@ -241,8 +240,6 @@ body {
 .navigation-catalog-conteiner {
   position: relative;
 }
-
-
 
 .navigation-menu-link {
   font-family: "Raleway", sans-serif;
@@ -335,6 +332,16 @@ body {
   color: rgb(0, 0, 0, 0.3);
 }
 
+.navigation-catalog-conteiner:hover .navigation-list-more {
+  display: block;
+}
+
+.navigation-catalog-conteiner:focus-within .navigation-list-more {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+  display: block;
+}
+
 .navigation-list-more-current {
   border-bottom: 1px solid #000000;
 }
@@ -350,6 +357,19 @@ body {
 .navigation-link:hover,
 .navigation-menu-link-conditions:hover {
   opacity: 0.6;
+}
+
+.navigation-more-link {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: inherit;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 20px;
 }
 
 .navigation-more-link:hover {
@@ -408,19 +428,6 @@ body {
 
 .navigation-item-menu:last-child {
   padding-right: 0;
-}
-
-.navigation-more-link {
-  font-family: "Rubik", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  color: inherit;
-  text-decoration: none;
-  text-transform: none;
-  letter-spacing: 0;
-  margin-bottom: 20px;
 }
 
 .navigation-item-more {
@@ -506,8 +513,6 @@ body {
 .slider-button:disabled {
   opacity: 0.1;
 }
-
-
 
 .product-description-conteiner {
   display: flex;
@@ -1467,7 +1472,6 @@ body {
   opacity: 0.3;
 }
 
-/* на последнем элементе "монгподы для селфи" не6 срабатывает  focus-visible, не пгоняла почему */
 .breadcrumbs-link:focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
@@ -1667,7 +1671,7 @@ body {
   border-radius: 3px;
 }
 
-.control-input[type="checkbox"]:checked+.control-mark::before {
+.control-input[type="checkbox"]:checked + .control-mark::before {
   content: url("../images/tick.svg");
   position: absolute;
   height: 10px;
@@ -1676,16 +1680,16 @@ body {
   left: 5px;
 }
 
-.control-input:disabled+.control-mark,
-.control-input:disabled~.control-name {
+.control-input:disabled + .control-mark,
+.control-input:disabled ~ .control-name {
   opacity: 0.1;
 }
 
-.control-input[type="checkbox"]+.control-mark {
+.control-input[type="checkbox"] + .control-mark {
   border: 2px solid #cccccc;
 }
 
-.control-input[type="checkbox"]:checked+.control-mark {
+.control-input[type="checkbox"]:checked + .control-mark {
   border: 2px solid #000000;
 }
 
@@ -1699,20 +1703,20 @@ body {
   border-radius: 50%;
 }
 
-.control-input:disabled+.control-mark-range,
-.control-input:disabled~.control-mark-range-name {
+.control-input:disabled + .control-mark-range,
+.control-input:disabled ~ .control-mark-range-name {
   opacity: 0.1;
 }
 
-.control-input[type="radio"]+.control-mark-range {
+.control-input[type="radio"] + .control-mark-range {
   border: 2px solid #cccccc;
 }
 
-.control-input[type="radio"]:checked+.control-mark-range {
+.control-input[type="radio"]:checked + .control-mark-range {
   border: 2px solid #000000;
 }
 
-.control-input[type="radio"]:checked+.control-mark-range::after {
+.control-input[type="radio"]:checked + .control-mark-range::after {
   position: absolute;
   content: "";
   left: 6px;
@@ -1943,6 +1947,10 @@ body {
   color: rgb(0, 0, 0, 0.3);
 }
 
+.pagination-link-number {
+  color: rgb(0, 0, 0, 0.3);
+}
+
 .pagination-prev:focus-visible,
 .pagination-next:focus-visible,
 .pagination-link-number:focus-visible {
@@ -1954,10 +1962,6 @@ body {
 .pagination-next:disabled {
   color: rgb(0, 0, 0, 0.3);
   background-color: #DCDCDC;
-}
-
-.pagination-link-number {
-  color: rgb(0, 0, 0, 0.3);
 }
 
 .pagination-link-number:hover {
@@ -2134,7 +2138,6 @@ body {
   display: block;
 }
 
-
 .modal-container {
   position: fixed;
   z-index: 10;
@@ -2269,7 +2272,7 @@ body {
   border: 2px solid #ff3d3d;
 }
 
-.form-field:invalid+span {
+.form-field:invalid + span {
   color: #ff3d3d;
 }
 
@@ -2448,23 +2451,13 @@ body {
   display: block;
 }
 
-.control-input[type="checkbox"]:focus-visible+.control-mark {
+.control-input[type="checkbox"]:focus-visible + .control-mark {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
   border-radius: 0;
 }
 
-.control-input[type="radio"]:focus-visible+.control-mark-range {
+.control-input[type="radio"]:focus-visible + .control-mark-range {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
-}
-
-.navigation-catalog-conteiner:hover .navigation-list-more {
-  display: block;
-}
-
-.navigation-catalog-conteiner:focus-within .navigation-list-more {
-  outline: 2px solid #af4fff;
-  outline-offset: 2px;
-  display: block;
 }
