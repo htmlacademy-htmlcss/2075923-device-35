@@ -765,7 +765,7 @@ body {
   display: flex;
   min-height: 391px;
   background-color: #F0F0F0;
-  margin-bottom: 60px;
+  margin-bottom: 66px;
   position: relative;
 }
 
@@ -810,7 +810,7 @@ body {
   flex-direction: column;
   width: 452px;
   padding-top: 72px;
-  padding-bottom: 145px;
+  padding-bottom: 107px;
   padding-right: 242px;
   padding-left: 116px;
   position: relative;
@@ -1333,10 +1333,11 @@ body {
 .footer-menu-conteiner {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 466px;
   margin: 0 auto;
-  margin-top: 136px;
-  margin-left: 92px;
+  margin-top: 139px;
+  margin-left: 109px;
+  margin-right: 156px;
 }
 
 .footer-menu {
@@ -1444,7 +1445,7 @@ body {
 .footer-contacts {
   display: flex;
   flex-direction: column;
-  margin-top: 135px;
+  margin-top: 141px;
   width: 190px;
 }
 
@@ -1471,7 +1472,6 @@ body {
 }
 
 .footer-contacts-made_in {
-  padding: 5px;
   margin-left: auto;
 }
 
@@ -1570,6 +1570,7 @@ body {
 
 .catalog-filter {
   width: 100%;
+  height: 100%;
   flex-grow: 1;
   display: flex;
   margin: 0 auto;
