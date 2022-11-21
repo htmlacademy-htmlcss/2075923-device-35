@@ -783,37 +783,41 @@ body {
   padding-left: 60px;
   padding-right: 60px;
   width: 1160px;
-  min-height: 319px;
+  /* min-height: 319px; */
   margin: 0 auto;
   z-index: 1;
 }
 
-.main-services-conteiner::before {
+/* .main-services-conteiner::before {
   content: "";
   width: 7px;
   height: 100%;
   background-color: #000000;
   order: 2;
-}
+} */
+
 
 .services-list {
   min-width: 280px;
   margin: 0;
   padding: 0;
   padding-top: 65px;
+  padding-bottom: 65px;
   list-style-type: none;
-  order: 1;
+  z-index: -1;
+  position: relative;
 }
 
 .servises-conteiner {
   display: flex;
   flex-direction: column;
   width: 452px;
-  padding-top: 72px;
-  padding-bottom: 107px;
-  padding-right: 242px;
+  padding-top: 77px;
+  padding-right: 243px;
   padding-left: 116px;
   position: relative;
+  margin-bottom: 72px;
+  border-left: 7px solid black;
   order: 3;
 }
 
@@ -1586,8 +1590,8 @@ body {
 .filter {
   width: 200px;
   padding-top: 28px;
-  padding-right: 60px;
-  padding-left: 60px;
+  padding-right: 65px;
+  padding-left: 55px;
 }
 
 .filter-title {
@@ -1638,19 +1642,20 @@ body {
 
 .filter-group {
   padding: 0;
-  margin-bottom: 9px;
+  margin-bottom: 18x;
   font-size: 16px;
   line-height: 20px;
   border: none;
 }
 
 .filter-group-first {
-  margin-bottom: 35px;
+  margin-bottom: 27px;
 }
 
 .filter-group-list {
   list-style-type: none;
   padding: 0;
+  margin-bottom:34px;
 }
 
 .filter-group-item:not(:last-child) {
@@ -1662,10 +1667,18 @@ body {
   line-height: 20px;
   letter-spacing: -0.02em;
   font-size: 18px;
-  padding-top: 12px;
+  padding-top: 9px;
   border-top: 2px solid #000000;
   width: 200px;
   margin-bottom: 20px;
+}
+
+.filter-group-title-bluetooth {
+  margin-bottom: 9px;
+}
+
+.filter-group-list-bluetooth{
+  margin-bottom: 37px;
 }
 
 .range-scale {
@@ -2276,6 +2289,7 @@ body {
   height: 26px;
   border: none;
   background-image: url("../images/cross-icon.svg");
+  background-size: 26px;
   background-repeat: no-repeat;
   background-color: #ffffff;
   cursor: pointer;
@@ -2431,13 +2445,13 @@ body {
 }
 
 .modal-name .form-field {
-  background-image: url("../images/person_form.svg");
+  background-image: url("../images/person-icon.svg");
   background-repeat: no-repeat;
   background-position: right 21px center;
 }
 
 .modal-email .form-field {
-  background-image: url("../images/mail.svg");
+  background-image: url("../images/mail-icon.svg");
   background-repeat: no-repeat;
   background-position: right 21px center;
 }
@@ -2560,5 +2574,9 @@ body {
 }
 
 .filter-group-title-color {
-  margin-bottom: 1px;
+  margin-bottom: 5px;
+}
+
+.filter-group-title-first{
+  margin-bottom: 26px;
 }
